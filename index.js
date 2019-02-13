@@ -12,7 +12,7 @@ getMusic(function(songList){
 
 function getMusic(callback){
   var xhr = new XMLHttpRequest()
-  xhr.open('GET','http://localhost:8888/music.json')
+  xhr.open('GET','./music.json')
   xhr.onload = function(){
     if(xhr.status>=200&&xhr.status<300||xhr.status===304){
       callback(JSON.parse(this.responseText))

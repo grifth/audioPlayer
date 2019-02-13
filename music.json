@@ -1,20 +1,15 @@
 [{
-  "src":"http://localhost:8888/%E8%85%90%E8%8D%89%E4%B8%BA%E8%90%A4",
-  "title": "腐草为萤",
-  "author": "落aki"
+  "src":"https://github.com/grifth/MP3/blob/master/%E7%9B%97%E5%B0%86%E8%A1%8C%20-%20%E8%8A%B1%E7%B2%A5_%E9%A9%AC%E9%9B%A8%E9%98%B3%20.mp3?raw=true",
+  "title": "盗将行.mp3",
+  "author": "花粥_马雨阳 "
 }, {
-  "src": "http://localhost:8888/%E4%B8%8D%E8%A7%81%E5%BD%92%E4%BA%BA",
-  "title": " 不见归人",
+  "src": "https://github.com/grifth/MP3/blob/master/%E3%80%90%E8%90%BDAki%E3%80%91%E5%B0%8F%E5%B0%8F.mp3?raw=true",
+  "title": " 小小",
   "author": "落aki"
 },
 {
-  "src": "http://localhost:8888/shedidnotanswer",
-  "title": " she did not answer",
+  "src": "https://github.com/grifth/MP3/blob/master/%E6%A2%B6%E6%B5%A6%E7%94%B1%E8%A8%98%20-%20to%20be%20continued.mp3?raw=true",
+  "title": " to be continued.mp3",
   "author": "梶浦由记"
-},
-{
-  "src": "http://pk6wrlvns.bkt.clouddn.com/Kalafina%20-%20to%20the%20beginning%E3%80%90Fate%EF%BC%8FZero%20OP2%E3%80%91.mp3",
-  "title": " to the beginning",
-  "author": "kalafina"
 }
 ]
