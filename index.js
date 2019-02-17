@@ -38,10 +38,7 @@ function loadMusic(song){
 
 }
 
-function setProgressAndPresenttime(){
-    audio.ontimeupdate = function(){
-  }
-}
+
 
 audio.onplay = function(){
   clock = setInterval(()=>{
@@ -57,8 +54,11 @@ audio.onpause = ()=>{
   clearInterval(clock)
 }
 
+
+
 function settotalTime(){
   $(audio).on("canplay",function(){
+    $('.musicbox').removeClass('loading')
     tl=$(audio).get(0).duration;
     min = Math.floor(tl/60)
     sec = Math.floor(tl%60) + ''
@@ -72,8 +72,6 @@ $('.play')[0].onclick = ()=>{
   if(audio.paused){
     audio.play()
     $('.play').find('.iconfont').removeClass('icon-bofang').addClass('icon-pause')
-
-
   }else{
     audio.pause()
     $('.play').find('.iconfont').removeClass('icon-pause').addClass('icon-bofang')
@@ -81,15 +79,24 @@ $('.play')[0].onclick = ()=>{
 }
 
 $('.foward').on('click',()=>{
+  resetState()
   currentIndex = (++currentIndex)%musicList.length
   loadMusic(musicList[currentIndex])
 })
 
 $('.back').on('click',()=>{
+  resetState()
   currentIndex = (musicList.length+(--currentIndex))%musicList.length
-  console.log(currentIndex);
   loadMusic(musicList[currentIndex])
 })
+
+function resetState(){
+  $('.musicbox').addClass('loading')
+  $('.totalTime').text('00:00')
+  $('.presentTime').text('00:00')
+  $('.progress-now')[0].style.width = '0%'
+  $('.play').find('.iconfont').attr('class','icon-pause iconfont ')
+}
 
 $('.bar').on('click',function(e){
   var percent = e.offsetX / parseInt(getComputedStyle(this).width)
@@ -97,7 +104,6 @@ $('.bar').on('click',function(e){
 })
 
 audio.onended=()=>{
-  console.log(1111111);
   currentIndex = (++currentIndex)%musicList.length
   loadMusic(musicList[currentIndex])
 }
